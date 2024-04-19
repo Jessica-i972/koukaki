@@ -1,0 +1,153 @@
+/* Animations du site Koukaki */
+
+/* Animation hero */
+@keyframes topDown {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomUp {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation du logo dans le hero */
+@keyframes slippage {
+  from {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(6px, 6px, 0);
+  }
+}
+
+/* Apparition du contenu au défilement */
+
+.appear-loaded .appear [class*="appear-"] {
+  opacity: 0 !important;
+  transform: translateY(100px) !important;
+  transition: 10s !important;
+}
+
+.appear-loaded [class*="appear-"] {
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+
+/* Animation des fleurs */
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation des titres */
+.animated-title {
+  display: inline-block;
+  animation: animatedTitle 1s forwards;
+}
+
+@keyframes animatedTitle {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation des cloud */
+@keyframes cloudMove {
+  from {
+    transform: translateX(0%); /* Début à la position finale de l'animation initiale */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-400px); /* Fin à la position initiale (aucun décalage) */
+  }
+}
+
+@keyframes cloudMoveReverse {
+  from {
+    opacity: 1;
+    transform: translateX(-400px); /* Début à la position finale de l'animation initiale */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%); /* Fin à la position initiale (aucun décalage) */
+  }
+}
+
+@keyframes Float {
+  from {
+    transform: translateX(100%) translateZ(0);
+  }
+  to {
+    transform: translateX(-15%) translateZ(0);
+  }
+}
+
+@keyframes FadeFloat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
+}

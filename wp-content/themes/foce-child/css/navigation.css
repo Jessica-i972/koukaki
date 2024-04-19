@@ -1,0 +1,154 @@
+/***** NAVIGATION CSS *****/
+.main-navigation a {
+  text-align: center;
+}
+
+.modal__burger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 80px;
+  cursor: pointer;
+}
+
+.modal__burger .line {
+  height: 2px;
+  background-color: #000;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  font-family: "Roboto Mono", monospace;
+  font-size: 6px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal__content--logo {
+  width: 154px;
+  height: 95px;
+}
+
+.modal .modal__content {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: #fff5e9;
+  font-size: 3em;
+  display: none;
+}
+.modal__content ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 300px;
+}
+.modal__content li {
+  margin-top: 40px;
+}
+.modal__footer {
+  position: relative;
+  top: 25%;
+  text-transform: uppercase;
+}
+.modal__content li > a:hover {
+  filter: drop-shadow(0px 0px 5px #ff5c00);
+  -webkit-filter: drop-shadow(0px 0px 5px #ff5c00);
+  -moz-filter: drop-shadow(0px 0px 5px #ff5c00);
+}
+
+.site-title {
+  justify-content: center;
+  display: flex;
+}
+
+/* Création du bouton pour fermer */
+.modal__burger.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.modal__burger.close .line:first-child {
+  transform: rotate(45deg) translate3d(8px, 6px, 0);
+}
+
+.modal__burger.close span.line:last-child {
+  transform: rotate(-45deg) translate3d(8px, -6px, 0);
+}
+.modal h2,
+.modal li > a {
+  font-size: 3.1rem;
+}
+
+.modal__content::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  left: -4em;
+  top: 3em;
+  animation: rotateFlower 10000ms linear infinite 1ms;
+}
+.modal__content--story::before {
+  content: url("../assets/images/cat3.png");
+  position: absolute;
+  left: 245px;
+  bottom: -16px;
+  animation: float 6s 2s infinite ease-in-out;
+}
+.modal__content--story::after {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 63em;
+  bottom: -2em;
+  animation: rotateFlower 10000ms linear infinite 1ms;
+}
+.modal__content--characters::after {
+  content: url("../assets/images/random-flower-menu.png");
+  position: absolute;
+  left: 1323px;
+  top: -118px;
+  animation: rotateFlower 10000ms linear infinite 1ms;
+}
+.modal__content--place::before {
+  content: url("../assets/images/cat2.png");
+  position: absolute;
+  right: 224px;
+  top: -48px;
+  animation: float 6s 3s infinite ease-in-out;
+}
+.modal__content--place::after {
+  content: url("../assets/images//flower-menu.png");
+  position: absolute;
+  right: 72em;
+  top: -2em;
+  animation: rotateFlower 10000ms linear infinite 1ms;
+}
+
+.modal__content--studio::before {
+  content: url("../assets/images/cat1.png");
+  position: absolute;
+  left: 55px;
+  top: 3em;
+  animation: float 6s 4s infinite ease-in-out;
+}
+.modal__footer::before {
+  content: url("../assets/images/hibiscus-menu.png");
+  position: absolute;
+  left: 1107px;
+  bottom: -20.5em;
+  animation: rotateFlower 10000ms linear infinite 1ms;
+}
